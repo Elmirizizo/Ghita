@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ghita Senhaji Arkoubi</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif;}
+body{background:#0f172a;color:white}
+
+/* HEADER */
+header{
+position:fixed;
+top:0;
+width:100%;
+padding:20px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(0,0,0,0.3);
+backdrop-filter:blur(10px);
+z-index:1000;
+}
+.logo{font-weight:700}
+
+/* ===== NAVBAR ===== */
+nav{
+display:flex;
+gap:20px;
+}
+
+nav a{
+text-decoration:none;
+color:white;
+font-weight:500;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#38bdf8;
+}
+
+.menu-toggle{
+display:none;
+font-size:28px;
+cursor:pointer;
+}
+
+/* HERO */
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+position:relative;
+overflow:hidden;
+}
+.hero::before{
+content:"";
+position:absolute;
+width:120%;
+height:120%;
+background:url("profile.jpeg") center/cover no-repeat;
+filter:blur(50px) brightness(.4);
+top:-10%;left:-10%;
+z-index:0;
+}
+.hero-container{
+max-width:1200px;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+position:relative;
+z-index:1;
+padding:40px;
+}
+
+/* TEXT */
+.hero-text h1{font-size:48px;font-weight:800}
+.hero-text h2{color:#38bdf8;margin-top:10px}
+.hero-text p{margin-top:20px;color:#cbd5e1;line-height:1.6}
+
+/* BUTTONS */
+.btn{
+padding:14px 26px;
+border-radius:10px;
+margin:6px;
+border:none;
+cursor:pointer;
+font-weight:600;
+}
+.primary{background:#38bdf8;color:white}
+.outline{border:2px solid white;background:transparent;color:white}
+
+/* IMAGE */
+.hero-image img{
+max-width:350px;
+border-radius:20px;
+box-shadow:0 20px 60px rgba(0,0,0,0.6);
+}
+
+/* SECTIONS */
+.section{
+max-width:1000px;
+margin:auto;
+padding:80px 20px;
+}
+.card{
+background:white;
+color:#1e293b;
+padding:30px;
+border-radius:16px;
+margin-top:20px;
+box-shadow:0 10px 30px rgba(0,0,0,0.1);
+line-height:1.7;
+}
+
+/* DOCUMENTS */
+.doc{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px;
+margin:10px 0;
+background:#f1f5f9;
+border-radius:10px;
+}
+.download{
+background:#38bdf8;
+color:white;
+padding:8px 15px;
+border-radius:8px;
+text-decoration:none;
+}
+
+/* FOOTER */
+footer{
+text-align:center;
+padding:40px;
+background:#020617;
+}
+
+/* ===== MOBILE ===== */
+@media(max-width:900px){
+
+nav{
+position:absolute;
+top:70px;
+right:0;
+background:#020617;
+flex-direction:column;
+width:100%;
+text-align:center;
+max-height:0;
+overflow:hidden;
+transition:0.4s;
+}
+
+nav.active{
+max-height:500px;
+padding:20px 0;
+}
+
+nav a{
+padding:12px;
+display:block;
+}
+
+.menu-toggle{
+display:block;
+}
+
+.hero-container{
+grid-template-columns:1fr;
+text-align:center;
+}
+
+.hero-text h1{font-size:32px}
+.hero-image img{max-width:250px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">Ghita Senhaji Arkoubi</div>
+
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+<nav id="nav">
+<a href="#">Startseite</a>
+<a href="#about">Über mich</a>
+<a href="#experience">Berufserfahrung</a>
+<a href="#qual">Qualifikationen</a>
+<a href="#docs">Dokumente</a>
+<a href="#kontakt">Kontakt</a>
+</nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+<div class="hero-container">
+
+<div class="hero-text">
+<h1>GHITA SENHAJI ARKOUBI</h1>
+<h2>Angehende Pflegefachfrau</h2>
+
+<p>
+Als engagierte und zielorientierte Bewerberin für die Ausbildung zur Pflegefachfrau verfüge ich über praktische Erfahrungen im sozialen und pflegerischen Bereich. Mein Ziel ist eine langfristige berufliche Entwicklung im deutschen Gesundheitswesen.
+</p>
+
+<a href="lebenslauf.pdf"><button class="btn primary">Lebenslauf</button></a>
+<a href="https://wa.me/212653406588"><button class="btn outline">WhatsApp</button></a>
+<a href="mailto:senhajiarkoubi@ghita-pflege.de"><button class="btn outline">E-Mail</button></a>
+
+</div>
+
+<div class="hero-image">
+<img src="profile.jpeg" alt="Ghita">
+</div>
+
+</div>
+</section>
+
+<!-- ABOUT -->
+<div class="section" id="about">
+<h2>Über mich</h2>
+<div class="card">
+Als engagierte und zielorientierte Bewerberin für die Ausbildung zur Pflegefachfrau verfüge ich bereits über erste praktische Erfahrungen im sozialen und pflegerischen Bereich. Im Rahmen meiner bisherigen Tätigkeiten konnte ich fundierte Einblicke in die Betreuung von Kindern sowie in die Unterstützung älterer Menschen im Alltag gewinnen.
+
+Die Ausübung einer verantwortungsvollen und patientenorientierten Pflege stellt für mich nicht nur eine berufliche Perspektive, sondern auch eine persönliche Motivation dar. Besonders großen Wert lege ich auf Empathie, Zuverlässigkeit sowie auf die Einhaltung pflegerischer Standards.
+
+Durch meine strukturierte Arbeitsweise, meine ausgeprägte Teamfähigkeit sowie meine hohe Lernbereitschaft bin ich in der Lage, mich schnell in neue Aufgabenbereiche einzuarbeiten und aktiv zur Qualitätssicherung in der Pflege beizutragen.
+</div>
+</div>
+
+<!-- EXPERIENCE -->
+<div class="section" id="experience">
+<h2>Berufserfahrung</h2>
+<div class="card">
+Im Rahmen meiner bisherigen praktischen Tätigkeiten konnte ich umfassende Erfahrungen sowohl in der Kinderbetreuung als auch in der Altenpflege sammeln.
+
+Während meines Praktikums im Rabelais-Zentrum lag der Schwerpunkt meiner Aufgaben in der Unterstützung der pädagogischen Betreuung sowie in der Mitwirkung bei der Durchführung von Bewegungs- und Lernangeboten. Darüber hinaus erfolgte eine regelmäßige Teilnahme an Teambesprechungen sowie die Beobachtung und Dokumentation der kindlichen Entwicklung.
+
+Im Bereich der Altenpflege war ich in einer sozialen Einrichtung tätig, wo ich aktiv an der Durchführung grundlegender pflegerischer Maßnahmen beteiligt war. Zu meinen Aufgaben gehörten unter anderem die Unterstützung bei der Körperpflege, Hilfe bei der Mobilisation, Begleitung im Alltag sowie die Mitwirkung bei der Nahrungsaufnahme.
+
+Diese praktischen Erfahrungen haben wesentlich zur Festigung meiner beruflichen Zielsetzung beigetragen und mein Interesse an einer qualifizierten Ausbildung im Pflegebereich weiter verstärkt.
+</div>
+</div>
+
+<!-- QUALIFICATIONS -->
+<div class="section" id="qual">
+<h2>Qualifikationen</h2>
+<div class="card">
+Deutsch B2, Pflegekurse, Erste Hilfe und praktische Erfahrungen im Pflegebereich.
+</div>
+</div>
+
+<!-- DOCUMENTS -->
+<div class="section" id="docs">
+<h2>Dokumente & Nachweise</h2>
+<div class="card">
+
+<div class="doc"><span>Lebenslauf</span><a href="lebenslauf.pdf" class="download" target="_blank">Herunterladen</a></div>
+<div class="doc"><span>Motivationsschreiben</span><a href="motivationsschreiben.pdf" class="download" target="_blank">Herunterladen</a></div>
+<div class="doc"><span>Deutsch Zertifikat B2</span><a href="deutsch-b2-telc.pdf" class="download" target="_blank">Herunterladen</a></div>
+<div class="doc"><span>Deutsch Zertifikat B1</span><a href="deutsch-b1-telc.pdf" class="download" target="_blank">Herunterladen</a></div>
+<div class="doc"><span>Pflegekurs Zertifikat</span><a href="pflegekurs-online.pdf" class="download" target="_blank">Herunterladen</a></div>
+<div class="doc"><span>Fortbildung Pflege Deutschland</span><a href="fortbildung-pflege-deutschland.pdf" class="download" target="_blank">Herunterladen</a></div>
+<div class="doc"><span>Basiskurs Pflege</span><a href="basiskurs-pflege.pdf" class="download" target="_blank">Herunterladen</a></div>
+<div class="doc"><span>Erste Hilfe Zertifikat</span><a href="erste-hilfe-zertifikat.pdf" class="download" target="_blank">Herunterladen</a></div>
+<div class="doc"><span>Abiturzeugnis</span><a href="abiturzeugnis.pdf" class="download" target="_blank">Herunterladen</a></div>
+<div class="doc"><span>Notenspiegel Abitur</span><a href="notenspiegel-abitur.pdf" class="download" target="_blank">Herunterladen</a></div>
+<div class="doc"><span>Praktikum Altenpflege</span><a href="praktikum-altenpflege.pdf" class="download" target="_blank">Herunterladen</a></div>
+<div class="doc"><span>Praktikum Kinderbetreuung</span><a href="praktikum-kinderbetreuung.pdf" class="download" target="_blank">Herunterladen</a></div>
+<div class="doc"><span>Führerschein Klasse B</span><a href="fuehrerschein-klasse-b.pdf" class="download" target="_blank">Herunterladen</a></div>
+
+</div>
+</div>
+
+<!-- CONTACT -->
+<div class="section" id="kontakt">
+<h2>Kontakt</h2>
+<div class="card">
+Email: senhajiarkoubi@ghita-pflege.de<br>
+Telefon: +212 653406588<br>
+Ort: Fes, Marokko
+</div>
+</div>
+
+<footer>
+© 2026 Ghita Senhaji Arkoubi
+</footer>
+
+<script>
+function toggleMenu(){
+document.getElementById("nav").classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
